@@ -9,7 +9,7 @@ A migration dumping tool for Laravel 5.
 To get the latest version of Alt Three Schema, simply add the following line to the require block of your `composer.json` file:
 
 ```
-"alt-three/emoji": "~1.0"
+"alt-three/schema": "~1.0"
 ```
 
 You'll then need to run `composer install` or `composer update` to download it and have the autoloader updated.
