@@ -22,6 +22,19 @@ class SchemaServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->registerDump();
+    }
+
+    /**
+     * Registers the dump command.
+     *
+     * @return void
+     */
+    protected function registerDump()
+    {
+        $this->app->singleton('command.alt-three.dump', function ($app) {
+            return $app['AltThree\Schema\Commands\DumpCommand'];
+        });
+        $this->commands('command.alt-three.dump');
     }
 }
