@@ -14,23 +14,23 @@ namespace AltThree\Schema\Commands;
 use Illuminate\Console\Command;
 
 /**
- * This is the dump command class.
+ * This is the migrate command class.
  *
  * @author James Brooks <james@alt-three.com>
  */
-class DumpCommand extends Command
+class MigrateCommand extends Command
 {
     /**
      * The console command name.
      *
      * @var string
      */
-    protected $name = 'db:schema:dump';
+    protected $name = 'db:schema:migrate';
 
     /**
     * The console command description.
     *
     * @var string
     */
-   protected $description = 'Dumps the migrations into one single migration.';
+   protected $description = 'Migrates the schema dump.';
 }

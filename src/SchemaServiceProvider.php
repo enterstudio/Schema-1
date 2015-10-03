@@ -37,4 +37,17 @@ class SchemaServiceProvider extends ServiceProvider
         });
         $this->commands('command.alt-three.dump');
     }
+
+    /**
+     * Registers the migrate command.
+     *
+     * @return void
+     */
+    protected function registerMigrate()
+    {
+        $this->app->singleton('command.alt-three.migrate', function ($app) {
+            return $app['AltThree\Schema\Commands\MigrateCommand'];
+        });
+        $this->commands('command.alt-three.migrate');
+    }
 }
