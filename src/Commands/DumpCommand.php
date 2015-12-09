@@ -27,7 +27,7 @@ class DumpCommand extends Command
      */
     protected $name = 'db:schema:dump';
 
-    /**
+   /**
     * The console command description.
     *
     * @var string

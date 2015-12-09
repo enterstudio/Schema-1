@@ -27,7 +27,7 @@ class MigrateCommand extends Command
      */
     protected $name = 'db:schema:migrate';
 
-    /**
+   /**
     * The console command description.
     *
     * @var string
