@@ -13,6 +13,11 @@ namespace AltThree\Schema;
 
 use Illuminate\Support\ServiceProvider;
 
+/**
+ * This is the schema service provider.
+ *
+ * @author James Brooks <james@alt-three.com>
+ */
 class SchemaServiceProvider extends ServiceProvider
 {
     /**
@@ -49,5 +54,18 @@ class SchemaServiceProvider extends ServiceProvider
             return $app['AltThree\Schema\Commands\MigrateCommand'];
         });
         $this->commands('command.alt-three.migrate');
+    }
+
+    /**
+     * Get the services provided by the provider.
+     *
+     * @return string[]
+     */
+    public function provides()
+    {
+        return [
+            'command.alt-three.dump',
+            'command.alt-three.migrate',
+        ];
     }
 }
