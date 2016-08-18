@@ -2,21 +2,33 @@
 
 A migration dumping tool for Laravel 5.
 
+
 ## Installation
 
-[PHP](https://php.net) 5.5+ or [HHVM](http://hhvm.com) 3.6+, and [Composer](https://getcomposer.org) are required.
+Either [PHP](https://php.net) 5.5+ or [HHVM](http://hhvm.com) 3.6+ are required.
 
 To get the latest version of Alt Three Schema, simply add the following line to the require block of your `composer.json` file:
 
+```bash
+$ composer require alt-three/schema
 ```
-"alt-three/schema": "~1.0"
+
+Instead, you may of course manually update your require block and run `composer update` if you so choose:
+
+```json
+{
+    "require": {
+        "alt-three/schema": "^1.0"
+    }
+}
 ```
 
-You'll then need to run `composer install` or `composer update` to download it and have the autoloader updated.
+Once Alt Three Schema is installed, you need to register the service provider. Open up `config/app.php` and add the `AltThree\Schema\SchemaServiceProvider` class to the `providers`.
 
-Once Alt Three Schema is installed, you need to register the service provider. Open up `config/app.php` and add the following to the `providers` key.
 
-* `'AltThree\Schema\SchemaServiceProvider'`
+## Security
+
+If you discover a security vulnerability within this package, please e-mail us at support@alt-three.com. All security vulnerabilities will be promptly addressed.
 
 
 ## License
